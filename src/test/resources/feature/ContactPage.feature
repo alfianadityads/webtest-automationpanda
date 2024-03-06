@@ -11,3 +11,8 @@ Feature: Go to contact page
   Scenario: Fill all field with valid contents
     When User provide all valid data
     Then User see success message
+
+  @Negative
+  Scenario: Send message without fill email field
+    When User Fill all filed but without fill email field
+    Then User see error message

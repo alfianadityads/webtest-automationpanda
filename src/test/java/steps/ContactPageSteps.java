@@ -53,4 +53,15 @@ public class ContactPageSteps {
     public void userSeeSuccessMessage() {
         Assert.assertTrue(contactPageValidation.successMessage());
     }
+
+    @When("User Fill all filed but without fill email field")
+    public void userFillAllFieldButWithoutFillEmailField() {
+        action.inputAllFields("Hiraka", "", "Hello All!")
+                .clickContactMe();
+    }
+
+    @Then("User see error message")
+    public void userSeeErrorMessage() {
+        Assert.assertTrue(contactPageValidation.errorMessage());
+    }
 }

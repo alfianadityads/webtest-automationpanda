@@ -29,6 +29,9 @@ public class ContactPage extends BasePage {
     @FindBy(id = "contact-form-success-header")
     WebElement successMessage;
 
+    @FindBy(xpath = "//a[.='Email(required)']")
+    WebElement errorMessage;
+
     public ContactPage(TestContext context) {
         super(context);
         PageFactory.initElements(context.driver, this);

@@ -16,4 +16,8 @@ public class ContactPageValidation extends ContactPage {
     public boolean successMessage() {
         return getWait().until(ExpectedConditions.visibilityOf(successMessage)).isDisplayed();
     }
+
+    public boolean errorMessage() {
+        return getWait().until(ExpectedConditions.visibilityOf(errorMessage)).isDisplayed();
+    }
 }
